@@ -12,10 +12,14 @@ attendees:
 ---
 
 **ACTIONS**
+
 1. [JC, 2025-07-01] First action to do ...
 2. [RW, 2025-07-01] Second action to do ... 
 
+---
+
 **NOTES**
+
 *Topic: First topic discussed ...*
 - [RW] Post emensos insuperabilis expeditionis eventus languentibus partium animisks
 - [AW] quas periculorum varietas fregerat et laborum, nondum tubarum cessante
@@ -24,4 +28,3 @@ attendees:
 - [JC] clangore vel milite locato per stationes hibernas
 - [JG] fortunae saevientis procellae tempestates alias rebus infudere communibus per multa illa et dira facinora Caesaris Galli
 
-> pandoc meeting_note.md -o meeting_note.pdf
