@@ -12,8 +12,8 @@ attendees:
 ---
 
 **ACTIONS**
-[JC] First action to do ...
-[RW] Second action to do ... 
+1. [JC, 2025-07-01] First action to do ...
+2. [RW, 2025-07-01] Second action to do ... 
 
 **NOTES**
 *Topic: First topic discussed ...*
@@ -24,3 +24,4 @@ attendees:
 - [JC] clangore vel milite locato per stationes hibernas
 - [JG] fortunae saevientis procellae tempestates alias rebus infudere communibus per multa illa et dira facinora Caesaris Galli
 
+> pandoc meeting_note.md -o meeting_note.pdf
