@@ -1,22 +1,72 @@
-\documentclass[12pt]{article}
+%------------------------------------------------------------
+% Lecture Notes — joined main file
+% Only invariant parts (macros/preamble) live in lecture_macros.tex
+% Edit header values below for each lecture, and your notes content.
+%------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[spanish,activeacute]{babel}
+% Code listings (loaded here so it applies to all notes)
+\usepackage{listings}
+\lstset{
+basicstyle=\ttfamily\small,
+frame=single,
+breaklines=true,
+columns=fullflexible,
+showstringspaces=false,
+numbers=left,
+numberstyle=\tiny,
+captionpos=b
+}
 
-\title{Titulo}
-\author{Autor}
+% Shared macros, envrionments and layout
+\input{lecture_macros.tex}
 
 \begin{document}
 
-\maketitle
+% ====== PER-LECTURE HEADER (edit these each time) ======
+\lecture{1}{Introduction to Limit Theory}{2025-09-15}{Electrical Engineering 101}{Terrance Tao}
 
-\section{Secciones}
-\subsection{Subsecciones}
+% ====== SHORT, ONE-PAGE SAMPLE ======
+\section*{Overview}
+\begin{itemize}
+\item Notation: \(\lim_{x\to a} f(x)=L\) indicates that values of \(f(x)\) approach \(L\) as \(x\) approaches \(a\).
+\item Intuition: closeness of \(x\) to \(a\) forces closeness of \(f(x)\) to \(L\).
+\item Use algebraic simplification first when limits yield indeterminate forms such as \(0/0\).
+\end{itemize}
 
-asdasd asdasd
 
-asdasd
-asd
+\section*{Definition}
+For a function \(f: \R\to\R\), we say \(\lim_{x\to a} f(x)=L\) if for every \(\varepsilon>0\) there exists \(\delta>0\) such that whenever \(0<|x-a|<\delta\), it follows that \(|f(x)-L|<\varepsilon\).
+
+
+\section*{Example}
+Evaluate \(\displaystyle \lim_{x\to 2} \frac{x^2-4}{x-2}.\)
+
+
+\noindent\textit{Solution.} Since \(x^2-4=(x-2)(x+2)\), for \(x\neq 2\) we have \(\frac{x^2-4}{x-2}=x+2\). Hence the limit equals \(\lim_{x\to 2}(x+2)=4\). \hfill(\emph{removable discontinuity})
+
+
+\section*{Numerical verification (script)}
+\begin{lstlisting}[language=Python, caption={Two-sided evaluation near \(x=2\)}]
+import math
+
+
+def f(x):
+return (x**2 - 4) / (x - 2)
+
+
+for h in [1e-1, 1e-2, 1e-3, 1e-4]:
+print(f"x=2+h -> {f(2+h):.6f} x=2-h -> {f(2-h):.6f}")
+# Expected output: both sequences approach 4
+\end{lstlisting}
+
+
+\section*{Key takeaways}
+\begin{itemize}
+\item The \(\varepsilon\)–\(\delta\) definition formalizes the intuitive notion of approach.
+\item Simplification often eliminates indeterminate forms.
+\item A limit may exist even when \(f\) is undefined at the point.
+\end{itemize}
+
 
 \end{document}
-
