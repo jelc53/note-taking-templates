@@ -1,1 +1,6 @@
+# output dir
 target/
+
+# latex
+*.aux
+*.log
