@@ -1,15 +1,11 @@
 ---
 title: Title of meeting
 date: 2025-06-06
-margin-left: 2cm
-margin-right: 2cm
 tags:
   - tag-1
   - tag-2
-  - tag-3
 attendees: 
   - Ric Porteous (RP)
-  - James Griggs (JG)
   - Julian Cooper (JC)
 ---
 
