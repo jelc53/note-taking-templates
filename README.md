@@ -1,5 +1,5 @@
 # note-taking-templates
-Repository for storing useful note-taking templates across file formats, including markdown, latext, etc.
+Repository for storing useful note-taking templates across file formats, including markdown, latex, etc.
 
 | # | template         | command                          |
 |---|------------------|----------------------------------|
